@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IUsers } from './type'; // Adjust the path based on your project structure
+import { IUsers } from './type'; 
 import './infoList.css'
 const InfoList: React.FC = () => {
   const [users, setUsers] = useState<IUsers[]>([]);
@@ -11,7 +11,7 @@ const InfoList: React.FC = () => {
         const data: IUsers[] = await response.json();
 
         setUsers([...data]);
-        console.log(data); // Here you will get the data
+        console.log(data); 
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -32,7 +32,7 @@ const InfoList: React.FC = () => {
             <p>Email: {user.email}</p>
             <p>Phone: {user.phone}</p>
             <p>Website: {user.website}</p>
-
+            
             <p>
               Address: {user.address.street}, {user.address.suite}, {user.address.city},{user.address.zipcode}
             </p>
